@@ -1,5 +1,13 @@
 <template>
-  <div>
-    <h1>One More day at work</h1>
+  <Presentation/>
+  <Footer/>
+  <div class="presentation">
+
   </div>
 </template>
+
+<style scoped lang="scss">
+  h1 {
+    color: red;
+  }
+</style>
