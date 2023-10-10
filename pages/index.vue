@@ -1,5 +1,6 @@
 <template>
   <Presentation/>
+  <JeuPresentation/>
   <Footer/>
   <div class="presentation">
 
