@@ -3,7 +3,7 @@
       <nav>
         <div class="flex-icon-title">
           <nuxt-link to="/"><img src="../icons/logo.svg" alt="logo"></nuxt-link>
-          <p class="header-title"  >One More Day In Office</p>
+          <nuxt-link to="/"><p class="header-title"  >One More Day In Office</p></nuxt-link>
         </div>
         <ul>
           <li><nuxt-link to="/">Presentation</nuxt-link></li>
