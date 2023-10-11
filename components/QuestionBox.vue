@@ -8,6 +8,7 @@
       <label :for="'reponse' + index+id">{{ item[0] }}</label>
     </p>
   </div>
+  <div class="margin"></div>
 </template>
 
 <script setup>
@@ -27,6 +28,9 @@ const emit = defineEmits([
 
 </script>
 <style lang="scss">
+.margin{
+  margin-bottom:2em ;
+}
 .question-box {
   display: flex;
   flex: auto;
