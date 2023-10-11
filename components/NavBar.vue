@@ -1,7 +1,10 @@
 <template>
     <header>
       <nav>
-        <nuxt-link to="/"><img src="../icons/logo.svg" alt="logo"></nuxt-link>
+        <div class="flex-icon-title">
+          <nuxt-link to="/"><img src="../icons/logo.svg" alt="logo"></nuxt-link>
+          <nuxt-link to="/"><p class="header-title"  >One More Day In Office</p></nuxt-link>
+        </div>
         <ul>
           <li><nuxt-link to="/">Presentation</nuxt-link></li>
           <li><nuxt-link to="/jeu">Notre Jeu</nuxt-link></li>
@@ -20,6 +23,9 @@ export default defineComponent({
 
 <style scoped lang="scss">
 header {
+  position: sticky;
+  top:0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -35,6 +41,23 @@ header {
     width: 100%;
     margin: 0 10%;
 
+    .flex-icon-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header-title {
+      color: $black;
+      font-family: Jomhuria,serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      margin-left: 20px;
+    }
+
     ul {
       list-style: none;
       display: flex;
@@ -46,6 +69,16 @@ header {
       li {
         font-size: 15px;
         text-transform: uppercase;
+
+        .router-link-active:after {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $black;
+        }
 
         a {
           position: relative;
