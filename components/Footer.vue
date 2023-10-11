@@ -4,17 +4,17 @@
     </div>
   </template>
 
-<script>
+<script lang="ts">
     import { defineComponent } from 'vue'
 
     export default defineComponent({
-    name: 'Footer',
+      name: 'Footer',
     });
 </script>  
 
 <style scoped lang="scss">
     .footer {
-      background-color: #CDAACE;
+      background-color: $purple;
       display: flex;
       justify-content: center;
       align-items: center;
