@@ -1,23 +1,31 @@
-<script setup>
-const props = defineProps({
-  question: String,
-  reponses: [String, Boolean], 
-})
-</script>
-
 <template>
   <div class="question-box">
     <h3>{{ question || 'Indéfini' }}</h3>
   </div>
-
   <div class="main-answer-flex">
     <p class="answer-box" v-for="(item, index) in reponses" :key="index">
-      <input type="radio" :id="'reponse' + index" name="reponse" value=item[1] />
-      <label :for="'reponse' + index">{{ item[0] }}</label>
+      <input type="radio" :id="'reponse' + index+id" :name="'reponse'+ id " :value="item[1]" v-model="selectedResponse" @click="updateInput"  @change="emitResponse"/>
+      <label :for="'reponse' + index+id">{{ item[0] }}</label>
     </p>
   </div>
 </template>
 
+<script setup>
+const questionnaire = defineProps({
+  id: String,
+  question: String,
+  reponses: [String, Boolean],
+})
+function updateInput(event) {
+  console.log(event.target.value);
+  emit('reponses', event.target.value)
+}
+const emit = defineEmits([
+    'reponses'
+]);
+
+
+</script>
 <style lang="scss">
 .question-box {
   display: flex;
