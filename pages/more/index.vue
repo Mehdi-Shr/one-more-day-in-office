@@ -128,6 +128,11 @@ export default defineComponent({
     width: 100%;
     margin: $margin-block;
     background-color: $light-purple;
+    gap: 50px;
+
+    .b-image-text {
+      width: 25%;
+    }
   }
 
   .sources {
@@ -139,7 +144,7 @@ export default defineComponent({
     list-style: none;
 
     li a {
-      font-size: 18px;
+      font-size: $text-size;
       color: $purple;
       font-weight: bold;
       font-style: italic;

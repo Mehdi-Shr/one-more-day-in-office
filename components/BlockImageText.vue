@@ -51,7 +51,7 @@ export default defineComponent({
   }
 
   p {
-    font-size: 12px;
+    font-size: $text-size;
   }
 }
 </style>

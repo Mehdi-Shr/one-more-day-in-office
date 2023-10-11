@@ -50,10 +50,14 @@ export default defineComponent({
   justify-content: center;
   text-align: start;
   width: 80%;
-  margin: auto;
+  margin: 50px auto;
 
   img {
     margin: var(--margin);
+  }
+
+  p {
+    font-size: $text-size;
   }
 }
 </style>

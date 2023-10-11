@@ -67,7 +67,7 @@ header {
       gap: 200px;
 
       li {
-        font-size: 15px;
+        font-size: $text-size;
         text-transform: uppercase;
 
         .router-link-active:after {
