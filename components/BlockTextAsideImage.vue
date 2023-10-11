@@ -33,6 +33,7 @@ export default defineComponent({
     const cssVars = computed(() => {
       return {
         '--position': props.imgLeft? 'row' : 'row-reverse',
+        '--margin': props.imgLeft? '0 50px 0 0' : '0 0 0 50px',
       }
     })
 
@@ -44,11 +45,15 @@ export default defineComponent({
 <style scoped lang="scss">
 .b-image-text {
   display: flex;
-  flex-direction: var(--position);;
+  flex-direction: var(--position);
   align-items: center;
   justify-content: center;
   text-align: start;
   width: 80%;
   margin: auto;
+
+  img {
+    margin: var(--margin);
+  }
 }
 </style>

@@ -4,47 +4,56 @@
     <span class="border"></span>
 
     <div class="flex-image-text">
-      <BlockImageText src="icons/harcelement.png"
+      <BlockImageText src="icons/more-harcelement1.png"
                       alt="logo"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "/>
-      <BlockImageText src="icons/harcelement.png"
+                      text="Le harcèlement sexuel est une problématique sociétale grave qui touche de nombreuses personnes à travers le monde. Il se manifeste sous différentes formes, allant de commentaires déplacés à des avances non désirées, en passant par la diffusion de contenus sexuellement explicites sans consentement."/>
+      <BlockImageText src="icons/more-harcelement2.png"
                       alt="logo"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "/>
-      <BlockImageText src="icons/harcelement.png"
+                      text="Ce comportement inacceptable crée un   environnement toxique et traumatisant pour les victimes, qui peuvent subir des conséquences émotionnelles et psychologiques graves. Il est essentiel de sensibiliser la société au harcèlement sexuel, de mettre en place des politiques de prévention et de soutenir les victimes dans leur quête de justice."/>
+      <BlockImageText  src="icons/more-harcelement3.png"
                       alt="logo"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "/>
+                      text="La lutte contre le harcèlement sexuel exige une action collective, impliquant entreprises, écoles, institutions gouvernementales et la société dans son ensemble. Les victimes doivent être encouragées à signaler ces comportements en toute confiance, avec une application rigoureuse des lois anti-harcèlement pour dissuader les agresseurs."/>
 
     </div>
 
 
     <div class="flex-image-text-background">
       <BlockImageText title="Verbale"
-                      text="Des femmes du milieu profes s ionnel sont vict imes de compor tement s sexi s tes"/>
+                      text="Des femmes du milieu professionnel sont victimes de comportements sexistes"/>
       <BlockImageText title="Non verbal"
-                      text="Des vict imes affirmaient avoir enduré des contact s phys iques non dés irés dans le cadre profes s ionnel"/>
+                      text="Des victimes affirmaient avoir enduré des contacts physiques non désirés dans le cadre professionnel"/>
       <BlockImageText title="Physique"
-                      text="Des vict imes ont reçu des propos i t ions et des avances sexuelles déplacées durant leur act ivi té profes s ionnelle"/>
+                      text="Des victimes ont reçus des propositions et des avances sexuelles déplacées durant leurs activités professionnelles"/>
 
     </div>
 
     <h1 class="title">Prevention</h1>
     <span class="border"></span>
 
-    <BlockTextAsideImage src="icons/harcelement.png"
+    <BlockTextAsideImage src="icons/more-prevention1.png"
                          alt="logo"
-                         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "/>
-    <BlockTextAsideImage src="icons/harcelement.png"
+                         text="Dans une enquête, le Service statistique ministériel de la sécurité intérieure (SSMSI) dresse un état des lieux des comportements sexistes et sexuels au travail.
+
+En 2021, un adulte sur trois ayant déjà travaillé a été confronté à de tels comportements dans le milieu professionnel.
+
+En 2021, un adulte sur trois ayant déjà travaillé a été confronté à de tels comportements dans le milieu professionnel."/>
+
+    <BlockTextAsideImage src="icons/more-prevention2.png"
+                         alt="logo"
                          :img-left="false"
-                         alt="logo"
-                         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "/>
+                         text="Dans une enquête, le Service statistique ministériel de la sécurité intérieure (SSMSI) dresse un état des lieux des comportements sexistes et sexuels au travail.
+
+En 2021, un adulte sur trois ayant déjà travaillé a été confronté à de tels comportements dans le milieu professionnel.
+
+En 2021, un adulte sur trois ayant déjà travaillé a été confronté à de tels comportements dans le milieu professionnel."/>
 
     <div class="flex-image-text-background">
-      <BlockImageText title="36 %"
-                      text="Des femmes du milieu profes s ionnel sont vict imes de compor tement s sexi s tes"/>
-      <BlockImageText title="24 %"
-                      text="Des vict imes affirmaient avoir enduré des contact s phys iques non dés irés dans le cadre profes s ionnel"/>
-      <BlockImageText title="10 %"
-                      text="Des vict imes ont reçu des propos i t ions et des avances sexuelles déplacées durant leur act ivi té profes s ionnelle"/>
+      <BlockImageText title="52.5%"
+                      text="Des femmes et hommes du milieu professionnel sont victimes de comportements sexistes"/>
+      <BlockImageText title="31%"
+                      text="Des victimes affirmaient avoir enduré des contacts physiques non désirés dans le cadre professionnel"/>
+      <BlockImageText title="26%"
+                      text="Des victimes ont reçu des propositions et des avances sexuelles déplacées durant leurs activités professionnelles"/>
     </div>
 
     <h1 class="title">Sources</h1>
@@ -52,12 +61,16 @@
 
     <ul class="sources">
       <li><a
-          href="https://www.francetvinfo.fr/societe/violences-faites-aux-femmes/violences-sexistes-et-sexuelles-au-travail-trois-fois-plus-de-femmes-que-d-hommes-en-sont-victimes-et-notamment-en-debut-de-carriere_5491230.html">France Info</a>
+          target="_blank"
+          href="https://www.francetvinfo.fr/societe/violences-faites-aux-femmes/violences-sexistes-et-sexuelles-au-travail-trois-fois-plus-de-femmes-que-d-hommes-en-sont-victimes-et-notamment-en-debut-de-carriere_5491230.html">France
+        Info</a>
       </li>
       <li><a
+          target="_blank"
           href="https://www.interieur.gouv.fr/actualites/communiques-de-presse/chiffres-sur-victimes-du-sexisme-en-france-interstats-analyse">Gourvernement</a>
       </li>
       <li><a
+          target="_blank"
           href="https://www.tf1info.fr/societe/comportements-sexistes-et-sexuels-au-travail-une-personne-sur-trois-en-est-victime-selon-le-ministere-de-l-interieur-2239428.html">TF1</a>
       </li>
     </ul>
@@ -102,6 +115,7 @@ export default defineComponent({
     align-items: center;
     width: 100%;
     padding: $margin-block;
+
   }
 
   .flex-image-text-background {

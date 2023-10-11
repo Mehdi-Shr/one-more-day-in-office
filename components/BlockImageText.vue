@@ -38,6 +38,15 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 300px;
+  width: 500px;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 25px;
+  }
 }
 </style>
