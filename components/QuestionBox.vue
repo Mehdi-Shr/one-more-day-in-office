@@ -38,7 +38,7 @@ const emit = defineEmits([
 .main-answer-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: $lightpurple; 
+  background-color: $light-purple; 
   padding-left: 1em;
   padding-right: 1em;
 }
