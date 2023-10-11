@@ -1,22 +1,7 @@
-<template>
-  <div>
-    <form  method="get" >
-    <div v-for="item in questionnaire" :key="index">
-      <QuestionBox :id="item[0]" :question="item[1]" :reponses="item[2]" />
-    </div>
-    <div class="button-flex">
-      <Button type="button" v-on:click="validationQuestionnaire()">Valider</Button>
-    </div>
-
-</form>
-  </div>
-</template>
-
 <script>
 import { defineComponent } from "vue";
 import QuestionBox from "~/components/QuestionBox.vue";
 import Button from "~/components/Button.vue";
-
 
 export default defineComponent({
   components: {
@@ -34,20 +19,41 @@ export default defineComponent({
         [7,"Quelle est la meilleure façon de soutenir une personne qui se confie sur une situation de harcèlement ?", [["Lui dire de l'ignorer",false], ["Lui dire qu'elle exagère",true], ["Écouter sans juger et encourager à parler à une personne de confiance",true],["Prendre sa revanche sur le harceleur",false]]],
         [8,"Lequel de ces comportements n'est PAS une forme d'agression sexuelle ?", [["Forcer quelqu'un à avoir des relations sexuelles",false], ["Embrasser quelqu'un sans son consentement",true], ["Toucher inappropriément quelqu'un sans son consentement",false],["Demander à quelqu'un de sortir boire un verre avec vous",true]]],
         [9,"Quel est le principal obstacle empêchant les victimes de parler d'une agression sexuelle ?", [["Peur de ne pas être crue",false], ["Peur des représailles",false], ["Honte ou culpabilité",false],["Toutes les réponses ci-dessus",true]]],
-        [10,"Quelle est la meilleure défense contre le harcèlement sexuel ?", [["Ignorer",false], ["En Éducation et sensibilisation",true], ["Eviter tout contact avec l'opposé du sexe",false],["Porter des vêtements moins provocants",false]]],
-
+        [10,"Quelle est la meilleure défense contre le harcèlement sexuel ?", [["Ignorer",false], ["En Éducation et sensibilisation",true], ["Eviter tout contact avec l'opposé du sexe",false],["Porter des vêtements moins provocants",false]]]
       ]
     };
+  },
+  methods: {
+    validationQuestionnaire() {
+      const form = document.getElementById('formulaire');
+      const formData = new FormData(form);
+      for (const pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+      console.log(document.getElementById("formulaire"));
+      
+      return false;
+    }
   }
 });
-function validationQuestionnaire(form){
-return false;
-}
 </script>
+<template>
+  <div>
+    <form id="formulaire" method="get" >
+    <div v-for="item in questionnaire" :key="item[0]">
+      <QuestionBox :id="item[0]" :question="item[1]" :reponses="item[2]" />
+    </div>
+    <div class="button-flex">
+      <Button type="button" @click="validationQuestionnaire">Valider</Button>
+    </div>
+  </form>
+  </div>
+</template>
+
 <style>
 .button-flex{
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
