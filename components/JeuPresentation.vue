@@ -21,8 +21,13 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 // TODO: add variables of padding
+    import { defineComponent } from 'vue'
+
+    export default defineComponent({
+        name: 'JeuPresentation',
+    });
 </script>
 
 <style scoped lang="scss">

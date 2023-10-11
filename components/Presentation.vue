@@ -10,6 +10,14 @@
         </div>
     </div>
   </template>
+
+<script lang="ts">
+    import { defineComponent} from 'vue'
+
+    export default defineComponent({
+        name: 'Presentation',
+    });
+</script>
   
 <style scoped lang="scss">
     h1 {
@@ -37,5 +45,4 @@
     .flex-presentation-info {
         width:50%;
     }
-    
 </style>
