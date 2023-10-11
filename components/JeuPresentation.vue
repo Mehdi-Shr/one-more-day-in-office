@@ -32,15 +32,14 @@
 
 <style scoped lang="scss">
     .section{
-        padding: 0 10%;
-        padding-bottom: 50px;
+        padding: 0 10% 50px 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     p {
-        size: $text-size;
+        font-size: $text-size;
     }
 
     .title {
@@ -67,6 +66,7 @@
       display: flex;
       align-items: center;
       gap: 42px;
+      padding: 30px;
     }
 
     #pres-image {
@@ -77,7 +77,7 @@
 
     .section-content{
         width:50%;
-        text-align: end;
+        text-align: left;
     }
 
     .columns-flex {

@@ -51,7 +51,7 @@ header {
     .header-title {
       color: $black;
       font-family: Jomhuria,serif;
-      font-size: 18px;
+      font-size: 32px;
       font-style: normal;
       font-weight: bold;
       line-height: normal;

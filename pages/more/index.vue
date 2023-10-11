@@ -10,7 +10,7 @@
       <BlockImageText src="icons/more-harcelement2.png"
                       alt="logo"
                       text="Ce comportement inacceptable crée un   environnement toxique et traumatisant pour les victimes, qui peuvent subir des conséquences émotionnelles et psychologiques graves. Il est essentiel de sensibiliser la société au harcèlement sexuel, de mettre en place des politiques de prévention et de soutenir les victimes dans leur quête de justice."/>
-      <BlockImageText  src="icons/more-harcelement3.png"
+      <BlockImageText src="icons/more-harcelement3.png"
                       alt="logo"
                       text="La lutte contre le harcèlement sexuel exige une action collective, impliquant entreprises, écoles, institutions gouvernementales et la société dans son ensemble. Les victimes doivent être encouragées à signaler ces comportements en toute confiance, avec une application rigoureuse des lois anti-harcèlement pour dissuader les agresseurs."/>
 
@@ -113,9 +113,10 @@ export default defineComponent({
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
     padding: $margin-block;
-
   }
 
   .flex-image-text-background {

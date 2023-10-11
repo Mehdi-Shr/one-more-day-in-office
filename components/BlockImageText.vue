@@ -39,6 +39,7 @@ export default defineComponent({
   justify-content: center;
   text-align: center;
   width: 500px;
+  margin: auto;
 
   img {
     margin-bottom: 20px;
@@ -47,6 +48,10 @@ export default defineComponent({
   h3 {
     font-weight: bold;
     font-size: 25px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }
 </style>

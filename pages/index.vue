@@ -1,12 +1,14 @@
 <template>
   <Presentation/>
   <JeuPresentation/>
-  <Footer/>
-  <div class="presentation">
-
-  </div>
 </template>
 
-<style scoped lang="scss">
+<script>
+import {defineComponent} from "vue";
+import Presentation from "~/components/Presentation.vue";
+import JeuPresentation from "~/components/JeuPresentation.vue";
 
-</style>
+export default defineComponent({
+  components: {Presentation, JeuPresentation},
+})
+</script>

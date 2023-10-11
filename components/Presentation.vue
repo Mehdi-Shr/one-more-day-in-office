@@ -37,7 +37,7 @@
     }
 
     #pres-image {
-        width:50%;
+        width: 500px;
         height: auto;
         object-fit: contain;
     }
