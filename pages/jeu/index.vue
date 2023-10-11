@@ -47,7 +47,7 @@ return false;
 <style>
 .button-flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    align-items: center;
 }
 </style>

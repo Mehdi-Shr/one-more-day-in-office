@@ -29,6 +29,7 @@ const emit = defineEmits([
 </script>
 <style lang="scss">
 .margin{
+  margin-top: 1em;
   margin-bottom:2em ;
 }
 .question-box {
