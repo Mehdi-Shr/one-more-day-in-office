@@ -1,20 +1,29 @@
-<script >
-import { defineComponent } from "vue";
+<template>
+  <div>
+    <form id="formulaire" method="get" >
+      <div v-for="item in questionnaire" :key="item[0]">
+        <QuestionBox :id="item[0]" :question="item[1]" :reponses="item[2]" />
+      </div>
+      <div class="button-flex">
+        <Button type="button" @click="validationQuestionnaire">Valider</Button>
+      </div>
+    </form>
+  </div>
+</template>
+
+<script>
+import { ref } from "vue";
 import QuestionBox from "~/components/QuestionBox.vue";
 import Button from "~/components/Button.vue";
 
-export default defineComponent({
+export default {
   components: {
     QuestionBox,
     Button
   },
-  setup(){
-    const questionnaireRempli= ref(new Map())
-    return { questionnaireRempli}
-  },
-  data() {
-    return {
-      questionnaire: [
+  setup() {
+    const questionnaireRempli = ref(new Map());
+    const questionnaire = ref([
         [1,"Quelle est la définition légale du harcèlement sexuel ?", [["Faire des compliments",false], ["Proposer un rendez-vous",false], ["Imposer à quelqu'un, de façon répétée, des propos ou comportements à connotation sexuelle",true],["Tous les points ci-dessus",false]]],
         [2,"Quelle est la première étape à prendre en cas de harcèlement au travail ?", [["Ignorer le harceleur",false], ["En parler à un proche ou un collègue de confiance",true], ["Quitter son emploi",false],["Répondre agressivement",false]]],
         [3,"Une personne peut-elle être accusée de harcèlement sexuel même si elle pensait que ses avances étaient les bienvenues ?", [["Oui",true], ["Non",false], ["Seulement si la personne est de sexe masculin",false],["Seulement si la victime a dit non",false]]],
@@ -25,42 +34,33 @@ export default defineComponent({
         [8,"Lequel de ces comportements n'est PAS une forme d'agression sexuelle ?", [["Forcer quelqu'un à avoir des relations sexuelles",false], ["Embrasser quelqu'un sans son consentement",true], ["Toucher inappropriément quelqu'un sans son consentement",false],["Demander à quelqu'un de sortir boire un verre avec vous",true]]],
         [9,"Quel est le principal obstacle empêchant les victimes de parler d'une agression sexuelle ?", [["Peur de ne pas être crue",false], ["Peur des représailles",false], ["Honte ou culpabilité",false],["Toutes les réponses ci-dessus",true]]],
         [10,"Quelle est la meilleure défense contre le harcèlement sexuel ?", [["Ignorer",false], ["En Éducation et sensibilisation",true], ["Eviter tout contact avec l'opposé du sexe",false],["Porter des vêtements moins provocants",false]]]
-      ],
-    };
-  },
-  methods: {
-    validationQuestionnaire() {
-      const form = document.getElementById('formulaire');
-      const formData = new FormData(form);
-      for (const pair of formData.entries()) { 
-        questionnaireRempli.set(pair[0], pair[1]);
-        console.log(pair[0] + ': ' + pair[1]);
+      ])
+  const validationQuestionnaire = () => {
+    const form = document.getElementById("formulaire");
+    const formData = new FormData(form);
+    for (const pair of formData.entries()) {
+      questionnaireRempli.value.set(pair[0].replace("reponse", "question"), pair[1]);
     }
-    for (let i = 1; i < 10; i++) {
-      if(questionnaireRempli.get(i)){
-        document.getElementById("question"+i).scrollIntoView();
+    console.log("----------");
+    console.log(questionnaireRempli.value);
+    console.log("----------");
+
+    for (let i = 1; i <= 10; i++) {
+      if (questionnaireRempli.value.get("question"+i)==='false') {
+        console.log("question"+i);
+
+        document.getElementById(i).scrollIntoView({ behavior: "smooth",offsetTop: 120});
       }
     }
-    }
-  }
-  
-});
+  };
+
+  return { questionnaire, validationQuestionnaire };
+}
+};
 </script>
-<template>
-  <div>
-    <form id="formulaire" method="get" >
-    <div v-for="item in questionnaire" :key="item[0]">
-      <QuestionBox :id="item[0]" :question="item[1]" :reponses="item[2]" />
-    </div>
-    <div class="button-flex">
-      <Button type="button" @click="validationQuestionnaire">Valider</Button>
-    </div>
-  </form>
-  </div>
-</template>
 
 <style>
-.button-flex{
+.button-flex {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,5 @@
 <template>
-  <div :id="'question'+id" class="question-box">
+  <div :id="id" class="question-box">
     <h3>{{ question || 'Indéfini' }}</h3>
   </div>
   <div class="main-answer-flex">
@@ -18,7 +18,6 @@ const questionnaire = defineProps({
   reponses: [String, Boolean],
 })
 function updateInput(event) {
-  console.log(event.target.value);
   emit('reponses', event.target.value)
 }
 const emit = defineEmits([
