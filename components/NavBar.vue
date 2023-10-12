@@ -1,10 +1,10 @@
 <template>
     <header>
       <nav>
-        <div class="flex-icon-title">
-          <nuxt-link to="/"><img src="../icons/logo.svg" alt="logo"></nuxt-link>
-          <nuxt-link to="/"><p class="header-title"  >One More Day In Office</p></nuxt-link>
-        </div>
+          <nuxt-link to="/" class="flex-icon-title">
+            <img src="../icons/logo.svg" alt="logo">
+            <p class="header-title"  >One More Day In Office</p>
+          </nuxt-link>
         <ul>
           <li><nuxt-link to="/">Presentation</nuxt-link></li>
           <li><nuxt-link to="/jeu">Notre Jeu</nuxt-link></li>
