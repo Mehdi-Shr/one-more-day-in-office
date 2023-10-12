@@ -1,5 +1,5 @@
 <template>
-  <div class="question-box">
+  <div :id="'question'+id" class="question-box">
     <h3>{{ question || 'Indéfini' }}</h3>
   </div>
   <div class="main-answer-flex">

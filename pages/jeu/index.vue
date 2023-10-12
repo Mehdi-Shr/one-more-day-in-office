@@ -1,11 +1,16 @@
-<script>
+<script >
 import { defineComponent } from "vue";
 import QuestionBox from "~/components/QuestionBox.vue";
 import Button from "~/components/Button.vue";
 
 export default defineComponent({
   components: {
-    QuestionBox
+    QuestionBox,
+    Button
+  },
+  setup(){
+    const questionnaireRempli= ref(new Map())
+    return { questionnaireRempli}
   },
   data() {
     return {
@@ -20,21 +25,25 @@ export default defineComponent({
         [8,"Lequel de ces comportements n'est PAS une forme d'agression sexuelle ?", [["Forcer quelqu'un à avoir des relations sexuelles",false], ["Embrasser quelqu'un sans son consentement",true], ["Toucher inappropriément quelqu'un sans son consentement",false],["Demander à quelqu'un de sortir boire un verre avec vous",true]]],
         [9,"Quel est le principal obstacle empêchant les victimes de parler d'une agression sexuelle ?", [["Peur de ne pas être crue",false], ["Peur des représailles",false], ["Honte ou culpabilité",false],["Toutes les réponses ci-dessus",true]]],
         [10,"Quelle est la meilleure défense contre le harcèlement sexuel ?", [["Ignorer",false], ["En Éducation et sensibilisation",true], ["Eviter tout contact avec l'opposé du sexe",false],["Porter des vêtements moins provocants",false]]]
-      ]
+      ],
     };
   },
   methods: {
     validationQuestionnaire() {
       const form = document.getElementById('formulaire');
       const formData = new FormData(form);
-      for (const pair of formData.entries()) {
-      console.log(pair[0] + ': ' + pair[1]);
+      for (const pair of formData.entries()) { 
+        questionnaireRempli.set(pair[0], pair[1]);
+        console.log(pair[0] + ': ' + pair[1]);
     }
-      console.log(document.getElementById("formulaire"));
-      
-      return false;
+    for (let i = 1; i < 10; i++) {
+      if(questionnaireRempli.get(i)){
+        document.getElementById("question"+i).scrollIntoView();
+      }
+    }
     }
   }
+  
 });
 </script>
 <template>
