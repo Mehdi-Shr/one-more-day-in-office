@@ -4,7 +4,7 @@
   </div>
   <div class="main-answer-flex">
     <p class="answer-box" v-for="(item, index) in reponses" :key="index">
-      <input type="radio" :id="'reponse' + index+id" :name="'reponse'+ id " :value="item[1]" v-model="selectedResponse" @click="updateInput"  @change="emitResponse"/>
+      <input type="radio" :id="'reponse' + index+id" :name="'reponse'+ id " :value="item[1]" v-model="selectedResponse" @click="updateInput"  @change="emitResponse" required/>
       <label :for="'reponse' + index+id">{{ item[0] }}</label>
     </p>
   </div>
@@ -23,9 +23,8 @@ function updateInput(event) {
 const emit = defineEmits([
     'reponses'
 ]);
-
-
 </script>
+
 <style lang="scss">
 .margin{
   margin-top: 1em;

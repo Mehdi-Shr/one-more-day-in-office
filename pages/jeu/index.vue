@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div id="top-form">
     <form id="formulaire" method="get" >
       <div v-for="item in questionnaire" :key="item[0]">
         <QuestionBox :id="item[0]" :question="item[1]" :reponses="item[2]" />
       </div>
+      <p class="small">Tout les champs sont obligatoire</p>
       <div class="button-flex">
         <Button type="button" @click="validationQuestionnaire">Valider</Button>
       </div>
@@ -41,25 +42,31 @@ export default {
     for (const pair of formData.entries()) {
       questionnaireRempli.value.set(pair[0].replace("reponse", "question"), pair[1]);
     }
-    console.log("----------");
-    console.log(questionnaireRempli.value);
-    console.log("----------");
-
     for (let i = 1; i <= 10; i++) {
+      let firsterror=false
       if (questionnaireRempli.value.get("question"+i)==='false') {
-        console.log("question"+i);
-
-        document.getElementById(i).scrollIntoView({ behavior: "smooth",offsetTop: 120});
+        if(!firsterror){
+          document.getElementById(i).scrollIntoView({ behavior: "smooth"});
+          firsterror=true;
+        }
+      document.getElementById(i).classList.add("erreur")
       }
+
     }
   };
-
   return { questionnaire, validationQuestionnaire };
 }
 };
 </script>
 
 <style>
+.small{
+  font-size: small;
+  color: #9A9AB4;
+}
+.erreur{
+  border: solid red 2px;
+}
 .button-flex {
   display: flex;
   flex-direction: column;
