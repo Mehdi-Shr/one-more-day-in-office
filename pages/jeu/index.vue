@@ -82,6 +82,11 @@ export default {
   margin-bottom: 50px;
 }
 
+#top-form {
+  width: 80%;
+  margin: auto;
+}
+
 .game {
   display: flex;
   justify-content: center;
