@@ -1,9 +1,7 @@
 <template>
 
   <div class="game">
-    <iframe frameborder="0" src="https://itch.io/embed-upload/8883688?color=333333" allowfullscreen="" width="960"
-            height="620"><a href="https://g6-i1-epsimtp.itch.io/one-more-day-in-office">Play test_playWeb on itch.io</a>
-    </iframe>
+    <iframe frameborder="0" src="https://itch.io/embed-upload/8884131?color=333333" allowfullscreen="" width="960" height="620"><a href="https://g6-i1-epsimtp.itch.io/one-more-day-in-office">Play test_playWeb on itch.io</a></iframe> 
   </div>
   <div id="top-form">
     <form id="formulaire" method="get">
